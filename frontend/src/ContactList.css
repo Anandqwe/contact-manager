@@ -1,0 +1,111 @@
+.contact-list-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-list-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.contact-list-loading,
+.contact-list-empty {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.contact-table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.contact-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.contact-table tbody tr:nth-child(even):hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive table for mobile */
+@media screen and (max-width: 768px) {
+  .contact-table {
+    border: 0;
+  }
+
+  .contact-table thead {
+    display: none;
+  }
+
+  .contact-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  .contact-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+  }
+
+  .contact-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .contact-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+  }
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
