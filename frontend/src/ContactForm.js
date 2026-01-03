@@ -73,7 +73,7 @@ const ContactForm = ({ onContactAdded }) => {
     setIsSubmitting(true);
 
     try {
-      await axios.post('https://contact-manager-kyk2.onrender.com', formData);
+      await axios.post('https://contact-manager-kyk2.onrender.com/api/contacts', formData);
       setSuccessMessage('Contact submitted successfully!');
       setFormData({
         name: '',
